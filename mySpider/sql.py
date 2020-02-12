@@ -16,7 +16,7 @@ class TeacherSql(object):
         sql = "INSERT INTO `teacher`" \
               "(`name`, `title`, `info`)" \
               "VALUES ('%s', %s, %s)" % \
-              (item['name'], item['title'], db.escape(item['info']))
+              (item['name'], db.escape(item['title']), db.escape(item['info']))
         try:
             cursor.execute(sql)
             db.commit()
