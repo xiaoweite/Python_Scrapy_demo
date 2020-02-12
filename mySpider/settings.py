@@ -89,3 +89,32 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# redis
+REDIS_HOST = '192.168.0.2'
+REDIS_PASSWORD = 'lanson@bu123456'
+REDIS_PORT = 6379
+REDIS_DB = 0
+
+# mysql
+MYSQL_HOST = '192.168.0.2'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'bu123456'
+MYSQL_PORT = 3306
+MYSQL_DB = 'python_test'
+MYSQL_CHARSET = 'utf8mb4'
+
+MYSQL = {
+    'host': MYSQL_HOST,
+    'port': MYSQL_PORT,
+    'user': MYSQL_USER,
+    'password': MYSQL_PASSWORD,
+    'charset': MYSQL_CHARSET,
+    'database': MYSQL_DB
+}
+RETRY_TIMES = 1
+DOWNLOAD_TIMEOUT = 30
+FEED_EXPORT_ENCODING = 'utf-8'
+
+TIMEZONE = 'America/Los_Angeles'
+

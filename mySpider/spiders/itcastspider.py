@@ -2,6 +2,7 @@
 
 import scrapy
 from mySpider.items import ItcastItem
+from ..sql import TeacherSql
 
 # 创建一个爬虫类
 class ItcastSpider(scrapy.Spider):
@@ -13,6 +14,10 @@ class ItcastSpider(scrapy.Spider):
     start_urls = [
         "http://www.itcast.cn/channel/teacher.shtml"
     ]
+
+    # def start_requests(self):
+    #
+    #     pass
 
 
     def parse(self, response):
@@ -41,6 +46,7 @@ class ItcastSpider(scrapy.Spider):
             item['name'] = name[0]
             item['title'] = title[0]
             item['info'] = info[0]
+            TeacherSql.insert_teccher_item(item)
 
             yield item
 
