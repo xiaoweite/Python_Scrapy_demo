@@ -14,3 +14,5 @@ class ItcastItem(scrapy.Item):
     title = scrapy.Field()
     # 个人简介
     info = scrapy.Field()
+    # 创建时间
+    create_time = scrapy.Field()

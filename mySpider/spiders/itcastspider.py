@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import scrapy
+import time
 from mySpider.items import ItcastItem
 from ..sql import TeacherSql
 
@@ -46,6 +47,7 @@ class ItcastSpider(scrapy.Spider):
             item['name'] = name[0]
             item['title'] = title[0]
             item['info'] = info[0]
+            item['create_time'] = time.strftime('%Y-%m-%d %H:%I:%S', time.localtime(time.time()))
             TeacherSql.insert_teccher_item(item)
 
             yield item
