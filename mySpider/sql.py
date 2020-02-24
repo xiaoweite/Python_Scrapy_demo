@@ -23,7 +23,7 @@ class TeacherSql(object):
             db.commit()
             print('add_teacher--[name]:', item['name'])
         except pymysql.MySQLError as e:
-            cls.fp = open('sql.log', 'w+', encoding='utf-8')
+            cls.fp = open('sql.log', 'a+', encoding='utf-8')
             text = str(e) + "\n"
             cls.fp.write(text)
 
