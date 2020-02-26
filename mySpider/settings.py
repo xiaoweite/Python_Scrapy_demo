@@ -10,6 +10,9 @@
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
 BOT_NAME = 'mySpider'
+PROXY_LIST = 'proxy_ip_list'
+PROXY_IP_USING = 'proxy_ip_using'
+IS_ROBOT = 'is_robot'
 
 SPIDER_MODULES = ['mySpider.spiders']
 NEWSPIDER_MODULE = 'mySpider.spiders'
@@ -91,15 +94,15 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # redis
-REDIS_HOST = '192.168.0.2'
-REDIS_PASSWORD = 'lanson@bu123456'
+REDIS_HOST = '120.78.164.142'
+REDIS_PASSWORD = 'bu8515859'
 REDIS_PORT = 6379
 REDIS_DB = 0
 
 # mysql
-MYSQL_HOST = '192.168.0.2'
+MYSQL_HOST = '120.78.164.142'
 MYSQL_USER = 'root'
-MYSQL_PASSWORD = 'bu123456'
+MYSQL_PASSWORD = 'bu8515859'
 MYSQL_PORT = 3306
 MYSQL_DB = 'python_test'
 MYSQL_CHARSET = 'utf8mb4'
