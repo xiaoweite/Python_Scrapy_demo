@@ -10,7 +10,7 @@ import redis
 # api_url = "https://dps.kdlapi.com/api/getdps/?orderid={}&num=1&pt=1&dedup=1&format=json&sep=1"
 
 # 提取独享IP
-api_url = "http://http.tiqu.alicdns.com/getip3?num=3&type=2&pro=0&city=0&yys=0&port=11&pack=82738&ts=1&ys=1&cs=1&lb=1&sb=0&pb=45&mr=2&regions=&gm=4"
+api_url = "http://http.tiqu.alicdns.com/getip3?num=3&type=2&pro=0&city=0&yys=0&port=1&pack=82738&ts=1&ys=0&cs=1&lb=1&sb=0&pb=45&mr=1&regions=&gm=4"
 
 logger = logging.getLogger(__name__)
 
@@ -38,7 +38,9 @@ if __name__ == '__main__':
 
     r = redis.Redis(host='120.78.164.142', port='6379', db=0,password='bu8515859', decode_responses=True)
     proxy_list = fetch_proxy()
-    for dd in proxy_list:
-        aa = '{}:{}'.format(dd['ip'], dd['port'])
-        r.setex(aa, 600, aa)
+    proxy_ip_list = []
+    for proxy in proxy_list:
+        ip_prot = '{}:{}'.format(proxy['ip'], proxy['port'])
+        proxy_ip_list.append(ip_prot)
+    r.setex('proxy_ip_list', 600, ','.join(proxy_ip_list))
 
