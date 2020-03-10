@@ -60,7 +60,8 @@ def Proxy_read(proxy_list,user_agent_list,i):
         'http': proxy_ip
     }
 
-    url='https://www.amazon.com/product-reviews/B07RGDZ1H4?sortBy=recent&filterByStar=three_star' #blog 地址
+    # url='https://www.amazon.com/product-reviews/B07RGDZ1H4?sortBy=recent&filterByStar=three_star' #blog 地址
+    url = 'http://www.itcast.cn/channel/teacher.shtml'  # blog 地址
 
     try:
         req = requests.get(url, headers=headers,  timeout=6,verify=False)

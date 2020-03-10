@@ -11,6 +11,7 @@
 #         return item
 
 import json
+from .sql import TeacherSql
 
 class ItcastPipeline(object):
     # __init__方法是可选的，做为类的初始化方法
@@ -22,6 +23,7 @@ class ItcastPipeline(object):
     def process_item(self, item, spider):
         jsontext = json.dumps(dict(item), ensure_ascii = False) + "\n"
         self.filename.write(jsontext.encode("utf-8"))
+        TeacherSql.insert_teccher_item(item)
         return item
 
     # close_spider方法是可选的，结束时调用这个方法

@@ -48,7 +48,7 @@ class ItcastSpider(scrapy.Spider):
             item['title'] = title[0]
             item['info'] = info[0]
             item['create_time'] = time.strftime('%Y-%m-%d %H:%I:%S', time.localtime(time.time()))
-            TeacherSql.insert_teccher_item(item)
+            # TeacherSql.insert_teccher_item(item)
 
             yield item
 

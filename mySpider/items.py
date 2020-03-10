@@ -16,3 +16,18 @@ class ItcastItem(scrapy.Item):
     info = scrapy.Field()
     # 创建时间
     create_time = scrapy.Field()
+
+class AmazonItem(scrapy.Item):
+    # 商品标题
+    product_title = scrapy.Field()
+    # 标签
+    product_tags = scrapy.Field()
+    # 价格
+    product_price = scrapy.Field()
+    # 库存状态
+    stock_status = scrapy.Field()
+    # 销售配送
+    sales = scrapy.Field()
+
+    technical_details = scrapy.Field()
+

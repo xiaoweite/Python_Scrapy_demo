@@ -10,7 +10,8 @@ import redis
 # api_url = "https://dps.kdlapi.com/api/getdps/?orderid={}&num=1&pt=1&dedup=1&format=json&sep=1"
 
 # 提取独享IP
-api_url = "http://http.tiqu.alicdns.com/getip3?num=3&type=2&pro=0&city=0&yys=0&port=1&pack=82738&ts=1&ys=0&cs=1&lb=1&sb=0&pb=45&mr=1&regions=&gm=4"
+api_url = "http://http.tiqu.alicdns.com/getip3?num=1&type=2&pro=440000&city=440100&yys=0&port=1&pack=82738&ts=1&ys=1&cs=1&lb=1&sb=0&pb=45&mr=1&regions=&gm=4"
+# api_url = "http://http.tiqu.alicdns.com/getip3?num=1&type=2&pro=&city=0&yys=0&port=1&pack=82738&ts=0&ys=0&cs=1&lb=1&sb=0&pb=45&mr=1&regions=&gm=4"
 
 logger = logging.getLogger(__name__)
 
