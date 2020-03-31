@@ -7,6 +7,22 @@
 
 import scrapy
 
+class ZbpPostItem(scrapy.Item):
+    # 分类ID
+    log_CateID = scrapy.Field()
+    # 作者ID
+    log_AuthorID = scrapy.Field()
+    # 标题
+    log_Title = scrapy.Field()
+    # 摘要
+    log_Intro = scrapy.Field()
+    # 内容
+    log_Content = scrapy.Field()
+    # 发布时间
+    log_PostTime = scrapy.Field()
+
+    log_Meta= scrapy.Field()
+
 class ItcastItem(scrapy.Item):
     # 姓名
     name = scrapy.Field()

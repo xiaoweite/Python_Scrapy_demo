@@ -2,7 +2,7 @@ import logging
 import requests
 import json
 
-orderid = '927423007125727'  # 订单号
+orderid = '908278477739119'  # 订单号
 
 # 提取代理链接，以私密代理为例
 api_url = "https://dps.kdlapi.com/api/getdps/?orderid={}&num=1&pt=1&dedup=1&format=json&sep=1"
