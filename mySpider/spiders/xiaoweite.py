@@ -1,9 +1,16 @@
 # -*- coding: utf-8 -*-
 import scrapy
+
+import os
+import re
+import codecs
 import time
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from mySpider.items import ZbpPostItem
+from scrapy.http import Request
+from scrapy.http import FormRequest
+from scrapy.selector import Selector
 
 
 
@@ -21,7 +28,7 @@ class XiaoweiteSpider(CrawlSpider):
 
     rules = (
         Rule(LinkExtractor(allow=r'.+xiaoweite1\/article\/list\/\d+'),follow=True),
-        Rule(LinkExtractor(allow=r'.+xiaoweite1\/article\/details\/\d+'), callback='parse_item', follow=False),
+        Rule(LinkExtractor(allow=r'.+xiaoweite1\/article\/details\/\d+'),  callback='parse_item', follow=False),
     )
 
 

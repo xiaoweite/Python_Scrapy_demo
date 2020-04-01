@@ -36,7 +36,7 @@ DOWNLOAD_DELAY = 1
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = False
+COOKIES_ENABLED = True
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -57,8 +57,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-   # 'mySpider.middlewares.ProxyMiddleware.ProxyMiddleware': 501,
-   # 'mySpider.middlewares.MyspiderDownloaderMiddleware': 543,
+'mySpider.middlewares.MyspiderDownloaderMiddleware': 543,
 }
 
 # Enable or disable extensions
